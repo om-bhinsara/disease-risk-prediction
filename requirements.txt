@@ -3,4 +3,4 @@ pandas
 matplotlib
 seaborn
 ipykernel
-sklearn
+scikit-learn
