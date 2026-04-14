@@ -18,7 +18,7 @@ def preprocess_data(df):
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    return X_train, X_test, y_train, y_test
+    return X_train, X_test, y_train, y_test, scaler
 
 
 # test
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     from data_loader import load_data
 
     df = load_data()
-    X_train, X_test, y_train, y_test = preprocess_data(df)
+    X_train, X_test, y_train, y_test, scaler = preprocess_data(df)
 
     print("Preprocessing done")
     print(X_train.shape, X_test.shape)
